@@ -7,7 +7,7 @@ import yfinance as yf
 
 
 def display_image():
-    image = Image.open('final_version/project/stock.jpeg')
+    image = Image.open('stock.jpeg')
     st.image(image)
 
 
@@ -92,7 +92,7 @@ def metrics(data_price):
 @st.cache
 def read_data():
     try:
-        path_dat = "final_version/project/s&p500.csv"
+        path_dat = "s&p500.csv"
         df_sp = pd.read_csv(path_dat)
         return df_sp
     except Exception as e:
